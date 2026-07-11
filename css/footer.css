@@ -1,0 +1,17 @@
+/* Charba — footer */
+
+/* footer */
+footer{ background:var(--pasture-deep); color:#EFF3EA; padding-block:clamp(2.5rem,5vw,3.5rem) 1.5rem; }
+@media (prefers-color-scheme: dark){ footer{ background:#0D140F; } }
+:root[data-theme="dark"] footer{ background:#0D140F; }
+:root[data-theme="light"] footer{ background:var(--pasture-deep); }
+footer .wrap{ display:grid; gap:2rem; }
+.footer-top{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem; align-items:flex-start; }
+footer .wordmark{ color:#fff; }
+footer .lede{ color:rgba(239,243,234,.75); max-width:34ch; margin-top:.6rem; }
+.footer-links{ display:flex; gap:2.5rem; flex-wrap:wrap; }
+.footer-links h4{ font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(239,243,234,.55); margin-bottom:.7rem; }
+.footer-links ul{ list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+.footer-links a{ text-decoration:none; color:rgba(239,243,234,.9); font-size:.9rem; }
+.footer-links a:hover{ text-decoration:underline; }
+.footer-bottom{ border-top:1px solid rgba(239,243,234,.15); padding-top:1.2rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.7rem; font-size:.8rem; color:rgba(239,243,234,.6); }

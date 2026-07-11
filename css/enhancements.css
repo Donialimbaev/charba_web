@@ -1,0 +1,83 @@
+/* Charba — scroll-reveal, stagger animation, hover interactivity, bigger/bolder presentation typography */
+
+/* reveal */
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+/* ---------- presentation mode: bigger type, bolder weight, interactivity ---------- */
+html{ font-size: clamp(17px, 0.6vw + 14px, 21px); }
+
+body{ font-weight:600; }
+p, li, .lede, .mono, .tag-foot, .footer-links a, .team-note, .code-part .lab,
+.gov-item p, .map-audience li, .demo-note, .chat-bubble{ font-weight:700; }
+
+h1,h2,h3,h4{ font-weight:800; }
+.eyebrow{ font-weight:700; font-size:.82rem; }
+
+.hero h1{ font-size:clamp(3.6rem, 6vw + 1.6rem, 7.4rem); }
+.lede{ font-size:1.22rem; line-height:1.6; }
+.hero .lede{ font-size:1.36rem; }
+.section-head h2{ font-size:clamp(2.15rem, 2.6vw + 1.2rem, 3.2rem); }
+.feature-copy h2{ font-size:clamp(2.05rem, 2.4vw + 1rem, 2.9rem); }
+.feature-list li{ font-size:1.1rem; }
+.pillar h3{ font-size:1.24rem; }
+.pillar li{ font-size:1rem; }
+.nav-links a{ font-size:.74rem; font-weight:700; }
+.nav-cta{ font-size:.86rem; font-weight:700; }
+.btn{ font-size:.95rem; padding:1rem 1.8rem; font-weight:700; }
+.badge{ font-size:.9rem; font-weight:700; }
+.road-chip{ font-size:.96rem; }
+.gov-item .n{ font-size:1.2rem; }
+.code-part .val{ font-size:1.5rem; }
+.wordmark{ font-size:1.3rem; }
+
+/* stagger reveal for grids */
+.reveal.stagger{ opacity:1; transform:none; transition:none; }
+.stagger > *{ opacity:0; transform:translateY(18px) scale(.97); transition:opacity .55s ease, transform .55s ease; }
+.stagger.is-visible > *{ opacity:1; transform:translateY(0) scale(1); }
+.stagger > *:nth-child(1){ transition-delay:.02s; }
+.stagger > *:nth-child(2){ transition-delay:.08s; }
+.stagger > *:nth-child(3){ transition-delay:.14s; }
+.stagger > *:nth-child(4){ transition-delay:.2s; }
+.stagger > *:nth-child(5){ transition-delay:.26s; }
+.stagger > *:nth-child(6){ transition-delay:.32s; }
+.stagger > *:nth-child(7){ transition-delay:.38s; }
+.stagger > *:nth-child(8){ transition-delay:.44s; }
+.stagger > *:nth-child(9){ transition-delay:.5s; }
+.stagger > *:nth-child(10){ transition-delay:.56s; }
+
+/* interactive hover lift for cards & chips (after stagger so hover wins on equal specificity) */
+.pillar, .gov-item, .team-card, .arch-box, .road-chip, .badge,
+.code-part, .ask, .partner-chip, .tag-card{
+  transition: transform .3s cubic-bezier(.2,.8,.25,1), box-shadow .3s ease, border-color .3s ease;
+}
+.pillar:hover, .gov-item:hover, .team-card:hover, .arch-box:hover,
+.road-chip:hover, .badge:hover, .code-part:hover, .ask:hover, .partner-chip:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -24px rgb(var(--shadow) / .5);
+  border-color: var(--pasture);
+}
+.tag-card.photo:hover{ transform:translateY(-4px) scale(1.01); }
+
+/* primary cta pulse to draw attention */
+@keyframes ctapulse{
+  0%,100%{ box-shadow:0 0 0 0 rgba(193,101,44,.45); }
+  50%{ box-shadow:0 0 0 12px rgba(193,101,44,0); }
+}
+.btn-primary{ animation: ctapulse 2.6s ease-in-out infinite; }
+.btn-primary:hover{ animation-play-state:paused; }
+
+/* scroll progress bar */
+.scroll-progress{
+  position:fixed; top:0; left:0; height:4px; width:0%;
+  background:linear-gradient(90deg, var(--ember), var(--pasture));
+  z-index:60; transition:width .1s linear;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn-primary{ animation:none; }
+}
+
+@media (max-width: 1300px){
+  .nav-cta{ font-size:.78rem; padding:.6rem .95rem; }
+}
