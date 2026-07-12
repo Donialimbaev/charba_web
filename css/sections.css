@@ -30,6 +30,10 @@ section{ padding-block:clamp(3.2rem,7vw,5.5rem); }
 }
 .letter-card .hl{ color:var(--pasture); font-weight:700; }
 .letter-card .hl-red{ color:#C1372C; font-weight:700; }
+@media (max-width:600px){
+  #letter{ padding-block:.5rem; }
+  .letter-card{ padding:.75rem; border-radius:12px; margin:0; }
+}
 
 /* ---------- whatsapp cta ---------- */
 #whatsapp-cta{ padding-block:0 clamp(3.2rem,7vw,5.5rem); }
