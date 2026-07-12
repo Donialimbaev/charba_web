@@ -7,6 +7,30 @@ section{ padding-block:clamp(3.2rem,7vw,5.5rem); }
 .section-head .lede{ margin-top:1rem; }
 .alt{ background:var(--paper-raised); border-block:1px solid var(--mist); }
 
+/* ---------- letter ---------- */
+#letter{ padding-block:clamp(2.2rem,5vw,3.5rem) clamp(1rem,3vw,2rem); }
+.letter-card{
+  max-width:52rem; margin:0 auto;
+  background:var(--paper-raised); border:1px solid var(--mist); border-radius:20px;
+  padding:clamp(1.6rem,4vw,3rem);
+  box-shadow:0 30px 60px -38px rgb(var(--shadow) / .5);
+}
+.letter-card p{ margin-top:1.1rem; }
+.letter-card p:first-of-type{ margin-top:0; }
+.letter-greeting{
+  font-family:'Unbounded',sans-serif; font-weight:700; font-size:1.15rem; color:var(--pasture);
+}
+.letter-list{ margin:1.1rem 0 0; padding-left:1.2rem; display:grid; gap:.7rem; }
+.letter-list li{ font-size:.98rem; }
+.letter-list strong{ color:var(--pasture); }
+.letter-card a{ color:var(--ember); text-decoration:underline; text-underline-offset:.2em; }
+.letter-sign{
+  margin-top:1.8rem; padding-top:1.2rem; border-top:1px solid var(--mist);
+  font-style:italic; color:var(--ink-soft); line-height:1.8;
+}
+.letter-card .hl{ color:var(--pasture); font-weight:700; }
+.letter-card .hl-red{ color:#C1372C; font-weight:700; }
+
 /* ---------- whatsapp cta ---------- */
 #whatsapp-cta{ padding-block:0 clamp(3.2rem,7vw,5.5rem); }
 .whatsapp-cta-btn{
