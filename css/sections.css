@@ -39,7 +39,7 @@ section{ padding-block:clamp(3.2rem,7vw,5.5rem); }
   transition:transform .2s ease, box-shadow .2s ease;
 }
 .demo-gallery img:hover{ transform:translateY(-4px); box-shadow:0 30px 60px -26px rgb(var(--shadow) / .55); }
-.demo-gallery + .whatsapp-cta-btn{ margin-top:2rem; }
+.demo-gallery + .whatsapp-cta-btn{ margin-block:2.5rem; }
 
 .contour{
   height:44px;
