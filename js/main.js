@@ -3,6 +3,20 @@
 (function(){
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // hero tag barcode (real Code128, encodes the RFID number)
+  var barcodeEl = document.getElementById('tagBarcode');
+  if(barcodeEl && window.JsBarcode){
+    JsBarcode(barcodeEl, '41710000123456', {
+      format: 'CODE128',
+      displayValue: false,
+      margin: 0,
+      width: 1.4,
+      height: 18,
+      background: 'transparent',
+      lineColor: '#1A2118'
+    });
+  }
+
   // mobile nav toggle
   var navToggle = document.getElementById('navToggle');
   var navLinks = document.getElementById('navLinks');

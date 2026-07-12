@@ -15,6 +15,14 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="tagClip" clipPathUnits="objectBoundingBox">
+      <path d="M0.44,0 L0.56,0 Q0.62,0 0.62,0.048 L0.62,0.124 Q0.62,0.14 0.64,0.14 L0.90,0.14 Q0.92,0.14 0.9219,0.1599 L0.9981,0.9801 Q1.0,1.0 0.98,1.0 L0.02,1.0 Q0.0,1.0 0.0019,0.9801 L0.0781,0.1599 Q0.08,0.14 0.10,0.14 L0.36,0.14 Q0.38,0.14 0.38,0.124 L0.38,0.048 Q0.38,0 0.44,0 Z" />
+    </clipPath>
+  </defs>
+</svg>
+
 <header class="site-header">
   <div class="wrap">
     <nav class="primary-nav">
@@ -26,9 +34,12 @@
         <a href="#tech">Технология</a>
         <a href="#gov">Мамлекет үчүн</a>
         <a href="#roadmap">Жол картасы</a>
-        <a href="#team">Команда</a>
+        <a href="#team">Мен жөнүндө</a>
       </div>
-      <a class="nav-cta" href="#contact">Байланышуу</a>
+      <div class="nav-ctas">
+        <a class="nav-cta" href="tel:+996755008453">Байланышуу</a>
+        <a class="nav-cta nav-cta-whatsapp" href="https://wa.me/996755008453" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -47,6 +58,18 @@
       <p class="eyebrow">Фермер, дыйкандар үчүн эко-система</p>
       <h1>ЧАРБА</h1>
       <p class="lede">Айыл чарбасын санариптештирген, фермерлерди, мурап- касаптарды, алуучу-сатуучуларды бириктирген жана мал-жандыктын санагын жүргүзгөн, фермердин жумушун жеңилдеткен эко-система</p>
+    </div>
+    <div class="reveal" id="hero-visual">
+      <div class="tag-card photo" id="tiltCard">
+        <img src="assets/1.jpg" alt="Чарбанын электрондук RFID биркалары" />
+        <div class="tag-id-block">
+          <p class="tag-number mono">
+            <span class="tag-number-prefix">4171</span>
+            <span class="tag-number-main">0000123456</span>
+          </p>
+          <svg id="tagBarcode" class="tag-barcode" aria-hidden="true"></svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -252,9 +275,13 @@
       <div class="gov-item"><span class="n">05</span><p>Вет кызматтар үчүн онлайн төлөм</p></div>
       <div class="gov-item"><span class="n">06</span><p>Бюрократияны азайтуу</p></div>
       <div class="gov-item"><span class="n">07</span><p>Кошумча функциялар</p></div>
-      <div class="gov-item"><span class="n">08</span><p>Үнөмдөө</p></div>
+      <div class="gov-item"><span class="n">08</span><p>Мамлекеттик каражатты үнөмдөө</p></div>
       <div class="gov-item"><span class="n">09</span><p style="font-size:1.25em; font-weight:800; color:#C1372C;">Эттин баасын көзөмөлдөө</p></div>
       <div class="gov-item"><span class="n">10</span><p>Колл-центрди жеңилдетүү</p></div>
+    </div>
+
+    <div class="gov-note reveal">
+      <p>Эттин баасын фермерден баштап касапка чейин көзөмөлдөп беребиз! Бул биздин стратегиялык планыбыз</p>
     </div>
 
     <div class="map-card reveal">
@@ -287,14 +314,14 @@
     </div>
     <div class="asks reveal stagger">
       <div class="ask"><span class="n">1</span><p>Суу ресурстары, айыл чарба жана кайра иштетүү өнөр жайы министрлиги менен келишим</p></div>
-      <div class="ask"><span class="n">2</span><p>Мамлекеттик система менен Интеграция</p></div>
+      <div class="ask"><span class="n">2</span><p>Мамлекеттик система менен интеграция</p></div>
       <div class="ask"><span class="n">3</span><p>Аймактык ветеринардык кызматтын колдоосу</p></div>
       <div class="ask"><span class="n">4</span><p>Идентификация боюнча токтомду өзгөртүү</p></div>
       <div class="ask"><span class="n">5</span><p>Кой-эчки, чочколор үчүн жеке идентификация</p></div>
       <div class="ask"><span class="n">6</span><p>Электрондук биркаларга өтүү</p></div>
       <div class="ask"><span class="n">7</span><p>Коддордун структурасын өзгөртүү</p></div>
       <div class="ask"><span class="n">8</span><p>Биркалар үчүн өткөрүлгөн тендерди жоюу</p></div>
-      <div class="ask"><span class="n">9</span><p>Бирка сатууну бизге берүү</p></div>
+      <div class="ask"><span class="n">9</span><p>Бирка сатууну түз келишим менен бизге берүү</p></div>
     </div>
   </div>
 </section>
@@ -324,82 +351,62 @@
 <section id="team">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Команда</p>
-      <h2>Продукт менен тармакты бирдей түшүнгөн команда</h2>
+      <p class="eyebrow">Мен жөнүндө</p>
+      <h2>Продукт менен тармакты бирдей түшүнгөн адис</h2>
     </div>
-    <div class="team-grid reveal stagger">
-      <div class="team-card">
-        <span class="avatar" aria-hidden="true"></span>
-        <h3>Founder &amp; CEO</h3>
-        <p class="yrs">8 жылдык тажрыйба</p>
+    <div class="about-card reveal">
+      <span class="about-quote" aria-hidden="true">“</span>
+      <div class="about-photo">
+        <img class="avatar" src="assets/doni.JPG" alt="Алимбаев Данияр" />
+        <span class="about-badge">6<small>жыл</small></span>
       </div>
-      <div class="team-card">
-        <span class="avatar" aria-hidden="true"></span>
-        <h3>Flutter Team Lead</h3>
-        <p class="yrs">5 жылдык тажрыйба</p>
-      </div>
-      <div class="team-card">
-        <span class="avatar" aria-hidden="true"></span>
-        <h3>CTO</h3>
-        <p class="yrs">6 жылдык тажрыйба</p>
-      </div>
-      <div class="team-card">
-        <span class="avatar" aria-hidden="true"></span>
-        <h3>Senior Backend Developer</h3>
-        <p class="yrs">6 жылдык тажрыйба</p>
+      <div class="about-body">
+        <h3>Алимбаев Данияр</h3>
+        <p class="about-role">Долбоордун ээси</p>
+        <p class="about-tags-label">Адистик:</p>
+        <div class="about-tags">
+          <span class="about-tag">Жасалма интеллект</span>
+          <span class="about-tag">Компьютердик көрүү</span>
+          <span class="about-tag">Мобилдик тиркемелер</span>
+          <span class="about-tag">Продукт менеджмент</span>
+        </div>
+        <p class="team-note">Электрондук капчыктар, автоматташтыруу, электрондук төлөмдөр, фискалдык системалар жана санарип билим берүү долбоорлору боюнча тажрыйба.</p>
       </div>
     </div>
-    <p class="team-note">Команда мурда Mancho Devs, Donsoft, Fintech PRO, Lender Invest жана Batele LLC сыяктуу компанияларда финтех жана мобилдик продукттарды өнүктүрүшкөн.</p>
 
-    <div class="partner-row reveal stagger">
-      <span class="partner-chip">Cargo</span>
-      <span class="partner-chip">Quick Pay</span>
-      <span class="partner-chip">FintechPro</span>
+    <div class="stats-grid reveal stagger">
+      <div class="stat-item">
+        <span class="stat-num">3<small>жылдан бери</small></span>
+        <p>Долбоорду жасап келе жатабыз</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">5000<small>+</small></span>
+        <p>Фермер менен жолугуп, долбоорду талкууладык</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">200<small>+</small></span>
+        <p>Ветеринар менен жолугуп, долбоорду талкууладык</p>
+      </div>
+      <div class="stat-item stat-item-problem">
+        <span class="stat-num">2<small>жылдан бери</small></span>
+        <p>Мамлекеттик ветеринардык системадан оң жооп алган жокпуз!</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="whatsapp-cta">
+  <div class="wrap">
+    <a class="whatsapp-cta-btn" href="https://wa.me/996755008453" target="_blank" rel="noopener">
+      <span class="whatsapp-cta-ico" aria-hidden="true"></span>
+      WhatsApp аркылуу жазыңыз
+    </a>
   </div>
 </section>
 
 </main>
 
-<footer id="contact">
-  <div class="wrap">
-    <div class="footer-top">
-      <div>
-        <a class="wordmark" href="#top"><span class="dot"></span>ЧАРБА</a>
-        <p class="lede">Фермер, дыйкандар үчүн эко-система. Мал чарбачылыгын санарипке которуу.</p>
-      </div>
-      <div class="footer-links">
-        <div>
-          <h4>Платформа</h4>
-          <ul>
-            <li><a href="#platform">Мүмкүнчүлүктөр</a></li>
-            <li><a href="#tech">Технология</a></li>
-            <li><a href="#identification">Идентификация</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Долбоор</h4>
-          <ul>
-            <li><a href="#gov">Мамлекет үчүн</a></li>
-            <li><a href="#roadmap">Жол картасы</a></li>
-            <li><a href="#team">Команда</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Байланыш</h4>
-          <ul>
-            <li><a href="https://charba.kg" target="_blank" rel="noopener">charba.kg</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Чарба</span>
-      <span>Фермер, дыйкандар үчүн эко-система</span>
-    </div>
-  </div>
-</footer>
-
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
