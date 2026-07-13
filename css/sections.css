@@ -112,6 +112,8 @@ section{ padding-block:clamp(3.2rem,7vw,5.5rem); }
   border:1px solid var(--mist);
   border-radius:16px;
   padding:1.5rem 1.4rem 1.4rem;
+  display:flex;
+  flex-direction:column;
 }
 .pillar::before{
   content:"";
@@ -124,6 +126,16 @@ section{ padding-block:clamp(3.2rem,7vw,5.5rem); }
 .pillar ul{ list-style:none; margin:.75rem 0 0; padding:0; display:grid; gap:.4rem; }
 .pillar li{ color:var(--ink-soft); font-size:.92rem; padding-left:1.05rem; position:relative; }
 .pillar li::before{ content:"—"; position:absolute; left:0; color:var(--pasture); }
+.pillar-details{ margin-top:auto; padding-top:.7rem; display:none; }
+.pillar-details summary{
+  list-style:none; cursor:pointer; user-select:none;
+  display:inline-flex; align-items:center; gap:.35rem;
+  color:var(--pasture); font-size:.88rem; font-weight:600;
+}
+.pillar-details summary::-webkit-details-marker{ display:none; }
+.pillar-details summary::after{ content:"↓"; font-size:.8rem; transition:transform .2s ease; }
+.pillar-details[open] summary::after{ transform:rotate(180deg); }
+.pillar-details[open] summary{ margin-bottom:.4rem; }
 
 /* ---------- two-col feature ---------- */
 .feature{
