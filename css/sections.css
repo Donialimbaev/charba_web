@@ -30,6 +30,10 @@ section{ padding-block:clamp(3.2rem,7vw,5.5rem); }
 }
 .letter-card .hl{ color:var(--pasture); font-weight:700; }
 .letter-card .hl-red{ color:#C1372C; font-weight:700; }
+.letter-note-red{
+  border-left:3px solid #C1372C; background:rgb(193 55 44 / .06);
+  border-radius:0 10px 10px 0; padding:.85rem 1rem; color:#C1372C; font-weight:600;
+}
 @media (max-width:600px){
   #letter{ padding-block:.5rem; }
   .letter-card{ padding:.75rem; border-radius:12px; margin:0; }
